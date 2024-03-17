@@ -1,3 +1,11 @@
+@forward "../styles/global";
+
 div {
   background: blue;
+  color: white;
+  font-size: 2rem;
+}
+
+a{
+  color: yellow;
 }
