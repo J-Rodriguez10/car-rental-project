@@ -7,6 +7,11 @@
   margin: 0;
   padding: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 // base styles
 html {
@@ -21,9 +26,9 @@ body {
 }
 
 .container {
-  max-width: 133rem !important;
+  max-width: 1140px !important;
   margin: 0 auto !important;
-  padding: 0 2.5rem !important;
+  padding: 0 10px !important;
 }
 
 // scroll bar ------

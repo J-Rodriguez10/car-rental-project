@@ -1,28 +1,65 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+import logo from "../images/logo/autostar-logo.png";
 
 function Navbar() {
   return (
     <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/auto-listings">Auto Listings</Link>
-        </li>
-        <li>
-          <Link to="/about-us">About Us</Link>
-        </li>
-        <li>
-          <Link to="/testimonials">Testimonials</Link>
-        </li>
-        <li>
-          <Link to="/news">News</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      {/* desktop */}
+      <div className="navbar">
+        <img src={logo} alt="autostar-logo" />
+        
+        <ul className="navbar__ul">
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/"
+            >
+              <span className="caret-down">Home</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/auto-listings"
+            >
+              Auto Listings
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/about-us"
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/testimonials"
+            >
+              Testimonials
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/news"
+            >
+              News
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/contact"
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

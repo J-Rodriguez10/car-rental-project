@@ -1,0 +1,12 @@
+@use "../global/" as *;
+
+.btn-red {
+  padding: 15px 28px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  background-color: $primary-red;
+}

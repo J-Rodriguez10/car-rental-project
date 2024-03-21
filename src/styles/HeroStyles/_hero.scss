@@ -1,0 +1,118 @@
+@use "../global/" as *;
+
+/*
+=====================
+Variables
+=====================
+*/
+
+$transparent-border-clr: rgb(228, 228, 228);
+
+/*
+=====================
+Hero Styles
+=====================
+*/
+
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  overflow: auto;
+  width: 100%;
+  // border: 4px solid orange;
+  position: relative;
+  background: url(/src/images/bg-images/hero-bg.jpeg);
+  background-size: cover;
+
+  & .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3rem !important;
+
+    & .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      color: white;
+      max-width: 570px;
+
+      & h2 {
+        font-size: 50px;
+      }
+
+      & p {
+        font-size: 27px;
+        line-height: 41px;
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+/*
+=====================
+Hero Styles - Form
+=====================
+*/
+.hero-form {
+  // border: 1px solid green;
+  background: white;
+  color: $text-black;
+  // padding: 30px 40px;
+  margin: 50px 125px;
+  min-width: 295px;
+  min-height: 410px;
+  padding: 3rem 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    // padding: 0 3rem;
+    width: 100%;
+
+    & label {
+      text-transform: uppercase;
+
+      // padding-bottom: 5px;
+      // padding-top: 10px;
+      text-align: left;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+    }
+
+    & input,
+    & select {
+      width: 100%;
+      border: 1px solid $transparent-border-clr;
+      padding: 5px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      color: $text-gray;
+      height: 40px;
+      font-family: $basic-font;
+    }
+  }
+}
+
+/*
+=====================
+Miscellaneous
+=====================
+*/
+
+// darkens the text for the <select> input in the hero's form
+.darken-text {
+  color: $text-black !important;
+}
