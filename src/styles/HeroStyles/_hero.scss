@@ -15,25 +15,25 @@ Hero Styles
 */
 
 .hero {
-  height: 100vh;
-  min-height: 700px;
-  overflow: auto;
+  min-height: 800px;
+  height: 815px;
   width: 100%;
-  // border: 4px solid orange;
   position: relative;
   background: url(/src/images/bg-images/hero-bg.jpeg);
   background-size: cover;
 
   & .container {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    align-items: center;
-    width: 100%;
     justify-content: space-between;
-    margin-top: 3rem !important;
+    align-items: center;
+
+    // for better positioning
+    margin-top: -2.5rem !important;
 
     & .cta {
       display: flex;
@@ -55,19 +55,54 @@ Hero Styles
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .cta {
+    & h2 {
+      font-size: 45px !important;
+      min-width: 350px;
+      max-width: 350px;
+    }
+
+    & p {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    & .cta {
+      & h2 {
+        font-size: 35px !important;
+        font-weight: 600;
+        min-width: 300px;
+        max-width: 300px;
+      }
+      & p {
+        min-width: 300px;
+        max-width: 300px;
+        font-size: 2rem !important;
+        line-height: 30px !important;
+      }
+    }
+  }
+}
+
 /*
 =====================
 Hero Styles - Form
 =====================
 */
+
 .hero-form {
-  // border: 1px solid green;
   background: white;
   color: $text-black;
-  // padding: 30px 40px;
   margin: 50px 125px;
   min-width: 295px;
-  min-height: 410px;
+  min-height: 420px;
   padding: 3rem 3.5rem;
 
   display: flex;
@@ -79,14 +114,10 @@ Hero Styles - Form
     display: flex;
     flex-direction: column;
     font-size: 12px;
-    // padding: 0 3rem;
     width: 100%;
 
     & label {
       text-transform: uppercase;
-
-      // padding-bottom: 5px;
-      // padding-top: 10px;
       text-align: left;
       font-weight: 400;
       margin-bottom: 0.8rem;
@@ -106,13 +137,24 @@ Hero Styles - Form
   }
 }
 
+@media screen and (max-width: 995px) {
+  .hero-form {
+    margin: 0;
+  }
+}
+
 /*
 =====================
 Miscellaneous
 =====================
 */
 
-// darkens the text for the <select> input in the hero's form
 .darken-text {
   color: $text-black !important;
+}
+
+.scroll {
+  min-height: 100vh;
+  min-width: 100%;
+  background: transparent;
 }

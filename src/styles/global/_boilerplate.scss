@@ -26,9 +26,27 @@ body {
 }
 
 .container {
-  max-width: 1140px !important;
   margin: 0 auto !important;
   padding: 0 10px !important;
+
+  @media (min-width: 768px) {
+    max-width: 750px;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 980px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 // scroll bar ------

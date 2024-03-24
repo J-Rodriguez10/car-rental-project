@@ -18,8 +18,9 @@ function Hero() {
 
   return (
     <div className="hero">
-      <div className="container">
 
+      <div className="container">
+        
         {/* hero call-to-action */}
         <div className="cta">
           <h2>Book Your Auto Rental</h2>
@@ -33,36 +34,41 @@ function Hero() {
         <form className="hero-form">
           <div>
             <label htmlFor="pickup-date">Pick-up Date:</label>
-            <input
-              type="date"
-              id="pickup-date"
-              required
-            />
+            <input type="date" id="pickup-date" required />
           </div>
 
           <div>
             <label htmlFor="dropoff-date">Drop-off Date:</label>
-            <input
-              type="date"
-              id="dropoff-date"
-              required
-            />
+            <input type="date" id="dropoff-date" required />
           </div>
 
           <div>
             <label htmlFor="maker">Makers of Vehicle</label>
-            <select
-              className="darken-text"
-              id="location"
-              required
-            >{vehicleOptions}</select>
+            <select className="darken-text" id="location" required>
+              {vehicleOptions}
+            </select>
           </div>
 
           <button className="btn-red" onClick={(e) => e.preventDefault()}>
             Find it now
           </button>
         </form>
+      </div>
 
+      {/* transition svg */}
+      <div className="transition-svg placed-bottom">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-1000.1 -100.1 1000 100.2"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M -0 -6 V 0 h -1000 v -100 L -0 -6 z"
+            stroke="none"
+            strokeWidth="0.1"
+            fill="white"
+          />
+        </svg>
       </div>
     </div>
   );

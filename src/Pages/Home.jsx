@@ -1,9 +1,13 @@
-import Hero from "../components/Home/Hero"
+import Hero from "../components/Home/Hero";
 
 function Home() {
   return (
-    <Hero />
-  )
+    <>
+      <Hero />
+      {/* scroll */}
+      <div className="scroll"></div>
+    </>
+  );
 }
 
-export default Home
+export default Home;
