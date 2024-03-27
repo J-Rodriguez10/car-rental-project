@@ -40,31 +40,6 @@ StepsInfo Component Styles
     justify-content: flex-start;
     align-items: center;
 
-    header {
-      text-align: center;
-      color: white;
-      padding-bottom: 4rem;
-
-      h2 {
-        text-align: center;
-        font-size: 34px;
-        font-weight: 700;
-        max-width: 400px;
-      }
-
-      // sizing the underline svg for the <h2> header
-      .underline-cont {
-        height: 4rem;
-        width: 4rem;
-        margin: 0 auto;
-
-        svg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
     // listing the steps horizontally
     ul {
       display: flex;
@@ -90,7 +65,7 @@ StepsInfo Component Styles
 // mobile version
 @media screen and (max-width: $mobile-width) {
   .steps-info-sect {
-    padding-bottom: 14rem;
+    padding-bottom: 16rem;
     background: black;
 
     // removing bg video
@@ -100,14 +75,6 @@ StepsInfo Component Styles
 
     .steps-cont {
       padding-top: 10rem;
-
-      //
-      header {
-        h2 {
-          font-size: 24px;
-          max-width: 300px;
-        }
-      }
 
       // switching the horizontal list to a vertical one
       ul {

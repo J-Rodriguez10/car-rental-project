@@ -1,6 +1,9 @@
 @use "../global/" as *;
 
 .dynamic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: white;
   padding-bottom: 4rem;
@@ -10,6 +13,8 @@
     font-size: 34px;
     text-transform: uppercase;
     padding-bottom: 1rem;
+    font-weight: 700;
+    max-width: 400px;
   }
 
   // subtitle
@@ -39,6 +44,23 @@
     svg {
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  //
+  .dynamic-header {
+    h2 {
+      font-size: 28px;
+      max-width: 300px;
+    }
+
+    p {
+      border: 1px solid green;
+      max-width: 95%;
+
+      
     }
   }
 }
