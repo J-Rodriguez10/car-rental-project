@@ -1,3 +1,5 @@
+import TransitionSVG from "../TransitionSVG";
+
 function Hero() {
   const vehicleOptions = (
     <>
@@ -18,9 +20,7 @@ function Hero() {
 
   return (
     <div className="hero">
-
       <div className="container">
-        
         {/* hero call-to-action */}
         <div className="cta">
           <h2>Book Your Auto Rental</h2>
@@ -56,20 +56,7 @@ function Hero() {
       </div>
 
       {/* transition svg */}
-      <div className="transition-svg placed-bottom">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="-1000.1 -100.1 1000 100.2"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M -0 -6 V 0 h -1000 v -100 L -0 -6 z"
-            stroke="none"
-            strokeWidth="0.1"
-            fill="white"
-          />
-        </svg>
-      </div>
+      <TransitionSVG placement="bottom-right" />
     </div>
   );
 }

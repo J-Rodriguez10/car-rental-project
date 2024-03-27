@@ -26,10 +26,16 @@ Orientation Placement
 =====================
 */
 
-.placed-bottom {
+.placed-bottom-right{
   padding-top: 1.5rem;
   bottom: 0;
   transform: scaleX(-1) translateY(2px);
+}
+
+.placed-bottom-left {
+  padding-top: 1.5rem;
+  bottom: 0;
+  transform: translateY(2px);
 }
 
 // <div id="practice-1">

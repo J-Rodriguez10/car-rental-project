@@ -1,0 +1,44 @@
+@use "../global/" as *;
+
+.dynamic-header {
+  text-align: center;
+  color: white;
+  padding-bottom: 4rem;
+
+  // header main title
+  h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+  }
+
+  // subtitle
+  h4 {
+    font-size: 15.5px;
+    font-family: $fancy-font;
+    color: $text-gray;
+    font-weight: 600;
+  }
+
+  // body text
+  p {
+    color: $text-gray;
+    text-align: center;
+    // border: 1px solid red;
+    font-size: 14px;
+    max-width: 455px;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  // red undeline svg
+  .underline-cont {
+    width: 5rem;
+    height: 4.5rem;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

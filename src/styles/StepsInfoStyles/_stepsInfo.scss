@@ -1,0 +1,188 @@
+@use "../global/" as *;
+
+/*
+===========================
+StepsInfo Component Styles
+===========================
+*/
+
+.steps-info-sect {
+  min-height: 600px;
+  height: auto;
+  position: relative;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+
+  // orientating and adding an overlay to bg video
+  video {
+    position: absolute;
+    z-index: -1;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .steps-cont {
+    padding-top: 13rem;
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    header {
+      text-align: center;
+      color: white;
+      padding-bottom: 4rem;
+
+      h2 {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        max-width: 400px;
+      }
+
+      // sizing the underline svg for the <h2> header
+      .underline-cont {
+        height: 4rem;
+        width: 4rem;
+        margin: 0 auto;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    // listing the steps horizontally
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      // refers to the " > " svg
+      .next-step-svg {
+        svg {
+          width: 27px;
+          height: 27px;
+        }
+      }
+
+      li {
+        // Add styles for list items if needed
+      }
+    }
+  }
+}
+
+// mobile version
+@media screen and (max-width: $mobile-width) {
+  .steps-info-sect {
+    padding-bottom: 14rem;
+    background: black;
+
+    // removing bg video
+    video {
+      display: none;
+    }
+
+    .steps-cont {
+      padding-top: 10rem;
+
+      //
+      header {
+        h2 {
+          font-size: 24px;
+          max-width: 300px;
+        }
+      }
+
+      // switching the horizontal list to a vertical one
+      ul {
+        flex-direction: column;
+        min-height: 500px;
+
+        .next-step-svg {
+          transform: rotate(90deg);
+        }
+
+        li {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*
+========================
+Step Component Styles
+========================
+*/
+
+.step {
+  text-align: left;
+  height: 100%;
+  max-width: 250px;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  // setting a fixed size for icons
+  .icon-cont {
+    max-height: 80px;
+    max-width: 80px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      fill: white;
+    }
+  }
+
+  .info-cont {
+    h4 {
+      max-width: 150px;
+      font-size: 20px;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      line-height: 1.9rem;
+      font-size: 14px;
+      max-width: 150px;
+    }
+  }
+}
+
+// mobile version
+@media screen and (max-width: $mobile-width) {
+  .step {
+    flex-direction: column;
+    text-align: center;
+    min-width: 100%;
+
+    // increasing max-width allowed for step information
+    .info-cont {
+      h4,
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,7 +1,19 @@
 @use "./colors" as *;
 @use "./typography" as *;
 
-// universal reset
+/*
+=====================
+Global Variables
+=====================
+*/
+
+$mobile-width: 750px;
+
+/*
+=====================
+Universal Reset
+=====================
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,9 +37,19 @@ body {
   position: relative;
 }
 
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+section {
+  width: 100%;
+}
+
 .container {
   margin: 0 auto !important;
-  padding: 0 10px !important;
+  padding: 0 10px;
+  // min-height: 100% !important;
 
   @media (min-width: 768px) {
     max-width: 750px;
@@ -49,7 +71,11 @@ body {
   padding-right: 15px;
 }
 
-// scroll bar ------
+/*
+=====================
+Scrollbar
+=====================
+*/
 
 /* Firefox */
 * {
