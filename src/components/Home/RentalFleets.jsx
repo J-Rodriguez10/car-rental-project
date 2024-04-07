@@ -1,11 +1,14 @@
 import DynamicHeader from "../DynamicHeader";
 
+import { DUMMY_RENTAL_FLEETS } from "../../assets/dummyData/rentalFleetsData";
+import RentalFleet from "./RentalFleet";
+import DynamicCarousel from "../DynamicCarousel";
+import TransitionSVG from "../TransitionSVG";
+
 function RentalFleets() {
   return (
     <section className="rental-fleets-sect">
-      <div>
-
-        
+      <div className="container rental-fleets-cont ">
         {/* header */}
         <DynamicHeader
           titleColor="black"
@@ -16,8 +19,18 @@ function RentalFleets() {
           repellat magnam praesentium aliquid, quod ratione ea consequatur.
         </DynamicHeader>
 
-        {/*  */}
+        {/* rental fleets carousel */}
+
+        <DynamicCarousel
+          carouselDataArr={DUMMY_RENTAL_FLEETS}
+          CarouselItem={RentalFleet}
+          desktopConfigureObj={{ displayAmnt: 4, minWidth: 1200 }}
+          mediumConfigureObj={{ displayAmnt: 3, minWidth: 550 }}
+          mobileConfigureObj={{ displayAmnt: 1, minWidth: 0 }}
+        />
       </div>
+
+      <TransitionSVG placement="bottom-right" fill={"#F7F7F7"} />
     </section>
   );
 }

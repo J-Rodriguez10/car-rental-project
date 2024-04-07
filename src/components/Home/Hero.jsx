@@ -1,3 +1,4 @@
+import DynamicButton from "../DynamicButton";
 import TransitionSVG from "../TransitionSVG";
 
 function Hero() {
@@ -49,9 +50,7 @@ function Hero() {
             </select>
           </div>
 
-          <button className="btn-red" onClick={(e) => e.preventDefault()}>
-            Find it now
-          </button>
+          <DynamicButton btnType="red">Find it now</DynamicButton>
         </form>
       </div>
 

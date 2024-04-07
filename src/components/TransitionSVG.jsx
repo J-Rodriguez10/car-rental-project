@@ -1,5 +1,4 @@
-function TransitionSVG({ placement }) {
-
+function TransitionSVG({ placement, fill="white" }) {
   // Map placements to corresponding class names
   const placementMap = {
     "bottom-left": "placed-bottom-left",
@@ -22,7 +21,7 @@ function TransitionSVG({ placement }) {
           d="M -0 -6 V 0 h -1000 v -100 L -0 -6 z"
           stroke="none"
           strokeWidth="0.1"
-          fill="white"
+          fill={fill}
         />
       </svg>
     </div>

@@ -3,14 +3,6 @@
 
 /*
 =====================
-Global Variables
-=====================
-*/
-
-$mobile-width: 750px;
-
-/*
-=====================
 Universal Reset
 =====================
 */
@@ -46,20 +38,26 @@ section {
   width: 100%;
 }
 
+
+
+$mobile-width: 760px;
+$medium-width: 1000px;
+$desktop-width: 1200px;
+
 .container {
   margin: 0 auto !important;
   padding: 0 10px;
   // min-height: 100% !important;
 
-  @media (min-width: 768px) {
+  @media (min-width: $mobile-width) {
     max-width: 750px;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: $medium-width) {
     max-width: 980px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
     max-width: 1170px;
   }
 }

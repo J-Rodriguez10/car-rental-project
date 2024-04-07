@@ -748,3 +748,52 @@ export const caretArrowSVG = (
     </g>
   </svg>
 );
+
+/*
+=============================
+Rental Fleet Component - SVGs
+=============================
+*/
+
+export const highwaySVG = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40"
+    height="40"
+    viewBox="0 0 20 20"
+  >
+    <path
+      fill="currentColor"
+      d="M5.996 2.566a.5.5 0 00-.992-.132l-2 15a.5.5 0 00.992.132zm9-.132a.5.5 0 00-.992.132l2 15a.5.5 0 00.992-.132zM10.5 2.5a.5.5 0 00-1 0v3a.5.5 0 001 0zm-1 9a.5.5 0 001 0v-3a.5.5 0 00-1 0zm0 3a.5.5 0 011 0v3a.5.5 0 01-1 0z"
+    ></path>
+  </svg>
+);
+
+export const gasSVG = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 20 20"
+  >
+    <path
+      fill="currentColor"
+      d="M5 4.5V17h8V4.5A1.5 1.5 0 0011.5 3h-5A1.5 1.5 0 005 4.5m9 11V17h.5a.5.5 0 010 1h-11a.5.5 0 010-1H4V4.5A2.5 2.5 0 016.5 2h5A2.5 2.5 0 0114 4.5v9a1.5 1.5 0 003 0V9.167a1.5 1.5 0 00-.3-.9L15.6 6.8a.5.5 0 01.8-.6l1.1 1.467c.325.432.5.959.5 1.5V13.5a2.5 2.5 0 01-4 2m-8-11v4a.5.5 0 00.5.5h5a.5.5 0 00.5-.5v-4a.5.5 0 00-.5-.5h-5a.5.5 0 00-.5.5M7 5h4v3H7z"
+    ></path>
+  </svg>
+);
+
+export const transmissionSVG = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 20 20"
+  >
+    <path
+      strokeWidth="0.1"
+      fill="currentColor"
+      d="M10 2a2 2 0 0 0-.496 3.938A.506.506 0 0 0 9.5 6v3.5a.5.5 0 0 0 1 0V6a.508.508 0 0 0-.004-.062A2 2 0 0 0 10 2M9 4a1 1 0 1 1 2 0a1 1 0 0 1-2 0M4 4a1 1 0 0 0-1 1v11a1 1 0 1 0 2 0v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a1 1 0 1 0 2 0v-3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 0 .5-.5V5a1 1 0 1 0-2 0v4a.5.5 0 0 1-.5.5H12a.5.5 0 0 1 0-1h2V5a2 2 0 1 1 4 0v6.5a1.5 1.5 0 0 1-1.5 1.5H12v3a2 2 0 1 1-4 0v-3.5H6V16a2 2 0 1 1-4 0V5a2 2 0 1 1 4 0v3.5h2a.5.5 0 0 1 0 1H5.5A.5.5 0 0 1 5 9V5a1 1 0 0 0-1-1"
+    />
+  </svg>
+);

@@ -1,12 +1,25 @@
 @use "../global/" as *;
 
-.btn-red {
+.btn-base {
   padding: 15px 28px 12px;
   font-size: 12px;
   font-weight: 500;
-  color: #fff;
   border: none;
   text-transform: uppercase;
   transition: all 0.3s;
+}
+
+.btn-red {
+  color: #fff;
   background-color: $primary-red;
+}
+
+.btn-transparent {
+  border: 1px solid black;
+  background: transparent;
+
+  &:hover {
+    background: $primary-red;
+    color: white;
+  }
 }
