@@ -10,6 +10,31 @@ $carousel-btn-color: #999999;
 
 /*
 ========================
+Dynamic Carousel Styles
+========================
+*/
+
+.dynamic-carousel {
+  position: relative;
+
+  // slider
+  .slider {
+
+    ul {
+      display: flex;
+    }
+  }
+
+  // Carousel viewport: what the user is able to see
+  .carousel-viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+/*
+========================
 Carousel Pagination Btns
 ========================
 */
@@ -70,43 +95,4 @@ Carousel Pagination Btns
     }
   }
 }
-/*
-========================
-Dynamic Carousel Styles
-========================
-*/
 
-.dynamic-carousel {
-  position: relative;
-  // border: 5px solid orange;
-
-  // slider
-  .slider {
-    // position: absolute;
-    z-index: -99;
-    // border: 2px solid red;
-    // overflow: hidden;
-    // overflow: scroll;
-
-    // .view-window {
-    //   border: 1px solid blue;
-    //   overflow: hidden;
-    // }
-
-    ul {
-      display: flex;
-    }
-  }
-
-  // window view
-  .carousel-viewport {
-    // position: absolute;
-    // z-index: 10;
-    // top: 0;
-    // border: 1px solid green;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    // background: red;
-  }
-}
