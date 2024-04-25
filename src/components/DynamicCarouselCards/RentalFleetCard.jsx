@@ -3,8 +3,7 @@ import { formatPrice } from "../helperFunctions";
 
 import { transmissionSVG, gasSVG, highwaySVG } from "../../assets/SVGs";
 
-function RentalFleet({ carouselData, carouselStyle}) {
-
+function RentalFleetCard({ carouselData, carouselStyle }) {
   const {
     imgSrc,
     name,
@@ -13,10 +12,8 @@ function RentalFleet({ carouselData, carouselStyle}) {
     price,
   } = carouselData;
 
-
   return (
     <li style={carouselStyle} className="rental-fleet-card">
-      
       {/* car rental image */}
       <div className="car-img-cont">
         <img src={imgSrc} alt={name} />
@@ -64,4 +61,4 @@ function RentalFleet({ carouselData, carouselStyle}) {
   );
 }
 
-export default RentalFleet;
+export default RentalFleetCard;

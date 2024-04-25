@@ -1,7 +1,7 @@
 import DynamicHeader from "../DynamicHeader";
 
 import { DUMMY_RENTAL_FLEETS } from "../../assets/dummyData/rentalFleetsData";
-import RentalFleet from "./RentalFleet";
+import RentalFleet from "../DynamicCarouselCards/RentalFleetCard";
 import DynamicCarousel from "../DynamicCarousel";
 import TransitionSVG from "../TransitionSVG";
 
