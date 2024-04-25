@@ -155,8 +155,7 @@ function DynamicCarousel({
     marginRight: `${carouselStylesObj.cardMargin}%`,
   };
 
-  // Validating configurations to check if it makes sense (ex: can't display 5 elements, when data array only has 4)
-  // After validating, augmentedDataArr is made for illusion of infinite scrolling
+  // Validating and augmenting data
   let augmentedDataArr;
 
   if (desktopDisplayAmnt > carouselDataArr.length) {

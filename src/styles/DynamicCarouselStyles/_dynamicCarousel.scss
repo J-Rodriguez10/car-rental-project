@@ -14,13 +14,14 @@ Carousel Pagination Btns
 ========================
 */
 
+// Carousel Pagination Buttons
 .carousel-pagination-btns {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  // individual pagination button
+  // Individual Pagination Button
   .pag-btn {
     margin: 0 0.6rem;
     display: inline-block;
@@ -36,6 +37,7 @@ Carousel Pagination Btns
     background: transparent;
     cursor: pointer;
 
+    // Pseudo-element
     &::before {
       content: "";
       display: block;
@@ -49,24 +51,24 @@ Carousel Pagination Btns
       transform: translate(-50%, -50%);
     }
 
-    // hovering
+    // Hover State
     &:hover {
       border: 0.25px solid $primary-red;
     }
 
-    /* hover state for the pseudo-element */
+    // Hover State for Pseudo-element
     &:hover::before {
       background-color: $primary-red;
     }
   }
-}
 
-.pag-btn.pag-btn-active {
-  border: 0.25px solid $primary-red;
-  &::before {
-    background-color: $primary-red;
+  // Active Pagination Button
+  .pag-btn-active {
+    border: 0.25px solid $primary-red;
+    &::before {
+      background-color: $primary-red;
+    }
   }
-}
 
 /*
 ========================
@@ -91,4 +93,4 @@ Dynamic Carousel Styles
       min-width: 100%;
     }
   }
-}
+}}

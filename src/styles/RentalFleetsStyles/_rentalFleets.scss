@@ -43,7 +43,6 @@ RentalFleet Component
 */
 
 // individual rental fleet cards
-
 .rental-fleet-card {
   overflow: hidden;
   display: flex;
@@ -53,7 +52,6 @@ RentalFleet Component
   .car-img-cont {
     min-width: 260px;
     max-width: 260px;
-
     min-height: 130px;
     max-height: 130px;
     margin-bottom: 2rem;
@@ -74,7 +72,6 @@ RentalFleet Component
     padding: 1.9rem;
     color: $text-gray-3;
     border: 1px solid rgba(0, 0, 0, 0.033);
-
 
     .card-header {
       display: flex;
@@ -104,7 +101,6 @@ RentalFleet Component
           align-items: center;
           gap: 6px;
 
-          // auto icons for attributes
           .svg-cont {
             width: 40px;
             height: 20px;
@@ -165,15 +161,14 @@ RentalFleet Component
   }
 }
 
+// Media Query
 @media screen and (min-width: 550px) and (max-width: 710px) {
   .rental-fleet-card {
     .car-img-cont {
       min-width: 190px !important;
       max-width: 190px !important;
-
       min-height: 90px;
       max-height: 90px;
-
       margin-bottom: 3rem;
     }
 
