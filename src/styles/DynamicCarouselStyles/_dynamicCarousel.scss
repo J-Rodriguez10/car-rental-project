@@ -69,7 +69,7 @@ Carousel Pagination Btns
       background-color: $primary-red;
     }
   }
-
+}
 /*
 ========================
 Dynamic Carousel Styles
@@ -78,19 +78,35 @@ Dynamic Carousel Styles
 
 .dynamic-carousel {
   position: relative;
-  width: 100%;
+  // border: 5px solid orange;
 
-  .carousel-viewport {
-    position: relative;
-    min-width: none;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    min-width: 100%;
+  // slider
+  .slider {
+    // position: absolute;
+    z-index: -99;
+    // border: 2px solid red;
+    // overflow: hidden;
+    // overflow: scroll;
 
-    .slider {
-      min-width: 100%;
+    // .view-window {
+    //   border: 1px solid blue;
+    //   overflow: hidden;
+    // }
+
+    ul {
+      display: flex;
     }
   }
-}}
+
+  // window view
+  .carousel-viewport {
+    // position: absolute;
+    // z-index: 10;
+    // top: 0;
+    // border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // background: red;
+  }
+}
