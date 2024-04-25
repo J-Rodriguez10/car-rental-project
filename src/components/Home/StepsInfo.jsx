@@ -22,7 +22,7 @@ function StepsInfo() {
 
       <div className="container steps-cont">
         {/* header */}
-        <DynamicHeader title="How do our rentals work"   hasRedUnderline />
+        <DynamicHeader header="How do our rentals work"   hasRedUnderline />
 
         {/* steps to order car rental */}
         <ul>

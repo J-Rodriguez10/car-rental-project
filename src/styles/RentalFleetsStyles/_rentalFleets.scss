@@ -15,23 +15,21 @@ RentalFleets Section Component
 .rental-fleets-sect {
   position: relative;
   padding-top: 6rem;
-  padding-bottom: 170px;
-  // border: 5px solid red;
+  padding-bottom: 190px;
   min-height: 500px;
   height: auto;
   width: 100%;
 
   .rental-fleets-cont {
-    // border: 3px solid green;
     height: 100%;
     width: 100%;
 
     header {
+
     }
   }
 
   ul {
-    // border: 2px solid orange;
     width: 100%;
     display: flex;
     justify-content: start;
@@ -47,23 +45,17 @@ RentalFleet Component
 // individual rental fleet cards
 
 .rental-fleet-card {
-  // border: 1px solid black;
   overflow: hidden;
-  // min-height: 500px;
-  // max-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // gap: 10%;
 
   .car-img-cont {
-    // border: 1px solid red;
     min-width: 260px;
     max-width: 260px;
-    // width: 100%
+
     min-height: 130px;
     max-height: 130px;
-
     margin-bottom: 2rem;
 
     img {
@@ -75,16 +67,11 @@ RentalFleet Component
 
   .car-data-cont {
     background: $card-bg-color;
-    // border: 3px solid blue;
     width: 100%;
-    // height: 100%;
-    // overflow: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.9rem;
-    // border: 1px solid red;
-
     color: $text-gray-3;
     border: 1px solid rgba(0, 0, 0, 0.033);
 
@@ -97,7 +84,7 @@ RentalFleet Component
       padding-bottom: 1rem;
       border-bottom: 1px solid $transparent-white;
       width: 100%;
-      // justify-content: center;
+  
 
       h5 {
         font-size: 15px;
@@ -106,7 +93,6 @@ RentalFleet Component
 
       .attr-list {
         width: 100%;
-        // border: 1px solid orange;
         display: flex;
         justify-content: center;
 
@@ -114,7 +100,6 @@ RentalFleet Component
           margin: 0 2px;
           display: flex;
           flex-direction: column;
-          // border: 1px solid orange;
           justify-content: center;
           align-items: center;
           gap: 6px;
@@ -137,37 +122,30 @@ RentalFleet Component
     }
 
     .perks-list {
-      // border: 1px solid red;
       display: flex;
       flex-wrap: wrap;
       max-height: 60%;
       padding-top: 1.5rem;
 
       li {
-        // position: relative;
         display: block;
         color: $text-gray-2;
         font-size: 11px;
         margin-bottom: 0;
-        // border: 1px solid brown;
         width: 39%;
-        // height: 20px;
 
         color: $text-gray-2;
         font-size: 11px;
-        margin: 0 5px 5px 0; /* Add margin between list items */
-        // border: 1px solid brown;
-        padding: 3px 0; /* Add padding to make the items more spaced out */
-        flex: 1 1 auto; /* Let items grow and shrink to fill the space */
-        max-width: 50%; /* Set a maximum width for each item */
+        margin: 0 5px 5px 0; 
+        padding: 3px 0;
+        flex: 1 1 auto;
+        max-width: 50%;
         font-weight: 500;
 
         &:before {
-          // position: absolute;
           font-family: "Font Awesome 5 Free";
           content: "\f00c";
           font-weight: 900;
-          // border: 1px solid red;
           margin-right: 0.2rem;
           font-size: 0.9rem;
           color: rgb(50, 48, 48);
@@ -176,7 +154,6 @@ RentalFleet Component
     }
 
     .card-bottom {
-      // border: 1px solid green;
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -191,11 +168,9 @@ RentalFleet Component
 @media screen and (min-width: 550px) and (max-width: 710px) {
   .rental-fleet-card {
     .car-img-cont {
-      // border: 1px solid green;
-      // border: 1px solid red;
       min-width: 190px !important;
       max-width: 190px !important;
-      // width: 100%
+
       min-height: 90px;
       max-height: 90px;
 

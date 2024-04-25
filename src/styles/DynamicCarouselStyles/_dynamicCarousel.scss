@@ -10,55 +10,12 @@ $carousel-btn-color: #999999;
 
 /*
 ========================
-Dynamic Carousel Styles
-========================
-*/
-
-.dynamic-carousel {
-  position: relative;
-  width: 100%;
-
-  // .window-view {
-  //   // position: absolute;
-  //   // z-index: 10;
-  //   // top: 0;
-  //   border: 1px solid green;
-  //   width: 100%;
-  //   height: 100%;
-  //   overflow: hidden;
-  //   display: none;
-  //   // background: red;
-  // }
-
-  .carousel-viewport {
-    position: relative;
-    // top: 0;
-    // border: 1px solid orange;
-    min-width: none;
-    width: auto;
-    height: auto;
-    // z-index: -99;
-    overflow: hidden;
-
-    display: flex;
-    min-width: 100%;
-
-    .slider {
-      // border: 5px solid brown;
-      // display: flex;
-      min-width: 100%;
-    }
-  }
-}
-/*
-========================
 Carousel Pagination Btns
 ========================
 */
 
 .carousel-pagination-btns {
   margin-top: 4rem;
-  // border: 2px solid green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +27,7 @@ Carousel Pagination Btns
     width: 13px;
     height: 13px;
     border: 0.25px solid $carousel-btn-color;
-    border-radius: 50%; /* Ensures the button is a circle */
+    border-radius: 50%;
     position: relative;
     text-align: center;
     line-height: 80px;
@@ -108,5 +65,30 @@ Carousel Pagination Btns
   border: 0.25px solid $primary-red;
   &::before {
     background-color: $primary-red;
+  }
+}
+
+/*
+========================
+Dynamic Carousel Styles
+========================
+*/
+
+.dynamic-carousel {
+  position: relative;
+  width: 100%;
+
+  .carousel-viewport {
+    position: relative;
+    min-width: none;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    min-width: 100%;
+
+    .slider {
+      min-width: 100%;
+    }
   }
 }

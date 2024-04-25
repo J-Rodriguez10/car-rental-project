@@ -34,14 +34,13 @@ DynamicHeader Componenet Styles
   p {
     color: $text-gray;
     text-align: center;
-    // border: 1px solid red;
     font-size: 14px;
     max-width: 455px;
     margin: 0 auto;
     margin-top: 2rem;
   }
 
-  // red undeline svg
+  // red underline svg
   .underline-cont {
     width: 5rem;
     height: 4.5rem;
@@ -53,8 +52,8 @@ DynamicHeader Componenet Styles
   }
 }
 
+// media Query
 @media screen and (max-width: $mobile-width) {
-  //
   .dynamic-header {
     h2 {
       font-size: 28px;
@@ -62,9 +61,7 @@ DynamicHeader Componenet Styles
     }
 
     p {
-      border: 1px solid green;
       max-width: 95%;
-
     }
   }
 }

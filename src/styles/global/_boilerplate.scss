@@ -38,8 +38,6 @@ section {
   width: 100%;
 }
 
-
-
 $mobile-width: 760px;
 $medium-width: 1000px;
 $desktop-width: 1200px;
@@ -47,7 +45,6 @@ $desktop-width: 1200px;
 .container {
   margin: 0 auto !important;
   padding: 0 10px;
-  // min-height: 100% !important;
 
   @media (min-width: $mobile-width) {
     max-width: 750px;
@@ -59,6 +56,25 @@ $desktop-width: 1200px;
 
   @media (min-width: $desktop-width) {
     max-width: 1170px;
+  }
+}
+
+
+.container-wide {
+  margin: 0 auto !important;
+  width: 100%;
+  padding: 0;
+  @media (min-width: $mobile-width) {
+
+  }
+
+  @media (min-width: $medium-width) {
+
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+  
   }
 }
 
@@ -78,7 +94,7 @@ Scrollbar
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ff4d30 #ffffff;
+  scrollbar-color: $primary-red #ffffff;
 }
 
 /* Chrome, Edge and Safari */
@@ -101,13 +117,13 @@ Scrollbar
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #ff4d30;
+  background-color: $primary-red;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #ff4d30;
+  background-color: $primary-red;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #ff2525;
+  background-color: $primary-red;
 }

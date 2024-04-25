@@ -1,3 +1,4 @@
+import ContactUs from "../components/Home/ContactUs";
 import Hero from "../components/Home/Hero";
 import OurBenefits from "../components/Home/OurBenefits";
 import RentalFleets from "../components/Home/RentalFleets";
@@ -11,6 +12,7 @@ function Home() {
       <OurBenefits />
       <StepsInfo />
       <RentalFleets />
+      <ContactUs />
 
       {/* scroll */}
       <div className="scroll"></div>

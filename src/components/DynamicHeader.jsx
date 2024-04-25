@@ -1,10 +1,10 @@
 import { redUnderlineSVG } from "../assets/SVGs";
 
-function DynamicHeader({title, children=undefined, hasRedUnderline=false, subtitle=undefined, titleColor="white" }) {
+function DynamicHeader({header, children=undefined, hasRedUnderline=false, subtitle=undefined, headerColor="white" }) {
   return (
     <header className="dynamic-header">
-      {/* title */}
-      <h2 style={{ color: titleColor }}>{title}</h2>
+      {/* header */}
+      <h2 style={{ color: headerColor }}>{header}</h2>
 
       {/* subtitle */}
       {subtitle && <h4>{subtitle}</h4>}

@@ -11,8 +11,8 @@ function RentalFleets() {
       <div className="container rental-fleets-cont ">
         {/* header */}
         <DynamicHeader
-          titleColor="black"
-          title="Our Rental Fleets"
+          headerColor="black"
+          header="Our Rental Fleets"
           subtitle="Luxury Rental Services"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
@@ -24,7 +24,7 @@ function RentalFleets() {
         <DynamicCarousel
           carouselDataArr={DUMMY_RENTAL_FLEETS}
           CarouselItem={RentalFleet}
-          desktopConfigureObj={{ displayAmnt: 4, minWidth: 1200 }}
+          desktopConfigureObj={{ displayAmnt: 4, minWidth: 1000 }}
           mediumConfigureObj={{ displayAmnt: 3, minWidth: 550 }}
           mobileConfigureObj={{ displayAmnt: 1, minWidth: 0 }}
         />

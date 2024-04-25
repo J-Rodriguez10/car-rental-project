@@ -8,7 +8,7 @@ function OurBenefits() {
     <section>
       <div className="our-benefits container">
 
-        <DynamicHeader title="Our Benefits" titleColor="black" subtitle="Luxury Rental Services"/>
+        <DynamicHeader header="Our Benefits" headerColor="black" subtitle="Luxury Rental Services"/>
 
         <ul>
           <li>
