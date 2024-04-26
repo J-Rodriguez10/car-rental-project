@@ -5,6 +5,7 @@
 RentalFleet Component - CARD
 =============================
 */
+$card-bg-color: #f7f7f7;
 
 // Individual rental fleet cards
 .rental-fleet-card {
@@ -45,7 +46,6 @@ RentalFleet Component - CARD
       padding-bottom: 1rem;
       border-bottom: 1px solid $transparent-white;
       width: 100%;
-  
 
       h5 {
         font-size: 15px;
@@ -96,7 +96,7 @@ RentalFleet Component - CARD
 
         color: $text-gray-2;
         font-size: 11px;
-        margin: 0 5px 5px 0; 
+        margin: 0 5px 5px 0;
         padding: 3px 0;
         flex: 1 1 auto;
         max-width: 50%;

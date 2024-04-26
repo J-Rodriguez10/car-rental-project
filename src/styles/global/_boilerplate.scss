@@ -38,6 +38,13 @@ section {
   width: 100%;
 }
 
+/*
+=====================
+Containers
+=====================
+*/
+
+
 $mobile-width: 760px;
 $medium-width: 1000px;
 $desktop-width: 1200px;
@@ -76,6 +83,12 @@ $desktop-width: 1200px;
     max-width: 1200px;
   
   }
+}
+
+.container-large {
+  width: 100vw;
+  max-width: 1620px;
+  margin: 0 auto !important;
 }
 
 .container-fluid {
