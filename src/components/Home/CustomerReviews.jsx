@@ -1,3 +1,4 @@
+import CustomerReviewCard from "../DynamicCarouselCards/CustomerReviewCard"
 import DynamicHeader from "../DynamicHeader"
 
 function CustomerReviews() {
@@ -8,7 +9,11 @@ function CustomerReviews() {
 
         <DynamicHeader header="Customer Reviews" headerColor="black" subtitle="Luxury Rental Services" ></DynamicHeader>
 
-        
+        <CustomerReviewCard />
+
+        <div className="placeholder">
+          
+        </div>
 
 
       </div>
