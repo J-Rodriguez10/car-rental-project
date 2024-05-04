@@ -11,9 +11,9 @@ function CustomerReviews() {
 
         <CustomerReviewCard />
 
-        <div className="placeholder">
-          
-        </div>
+        {/* <div className="placeholder">
+
+        </div> */}
 
 
       </div>
