@@ -20,7 +20,6 @@ function RentalFleets() {
         </DynamicHeader>
 
         {/* rental fleets carousel */}
-
         <DynamicCarousel
           carouselDataArr={DUMMY_RENTAL_FLEETS}
           CarouselItem={RentalFleet}

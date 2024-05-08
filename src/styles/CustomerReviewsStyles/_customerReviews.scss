@@ -1,11 +1,18 @@
 @use "../global/" as *;
 
-.customer-reviews-sect {
-  
 
-  .placeholder {
-    width: 30px;
-    height: 100px;
-    background: red;
+/*
+========================
+Customer Reviews Section
+========================
+*/
+.customer-reviews-sect {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+  
+  header {
+    margin-bottom: 1rem;
   }
+  
 }

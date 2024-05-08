@@ -176,6 +176,7 @@ function DynamicCarousel({
       <div className="dynamic-carousel">
         {/* Viewport */}
         <div className="carousel-viewport">
+          
           {/* Slider */}
           <motion.ul
             className="slider"
