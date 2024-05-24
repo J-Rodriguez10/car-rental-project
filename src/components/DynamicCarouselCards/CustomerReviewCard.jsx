@@ -1,7 +1,7 @@
 function CustomerReviewCard({ carouselData, carouselStyle}) {
+  // destructuring data recieved from the DynamicCarousel Component
   const { customerImg, customerReview, customerName, occupation } =
     carouselData;
-
 
   return (
     <li style={carouselStyle} className="customer-review-card">

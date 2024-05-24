@@ -4,6 +4,8 @@ import { formatPrice } from "../helperFunctions";
 import { transmissionSVG, gasSVG, highwaySVG } from "../../assets/SVGs";
 
 function RentalFleetCard({ carouselData, carouselStyle }) {
+
+  // destructuring data recieved from the DynamicCarousel Component
   const {
     imgSrc,
     name,

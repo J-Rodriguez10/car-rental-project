@@ -1,0 +1,28 @@
+@use "../global/" as *;
+
+/*
+=====================
+Latest News Section
+=====================
+*/
+
+.latest-news-sect {
+  background: #f7f7f7;
+  padding-top: 6.5rem;
+  padding-bottom: 16rem;
+
+  header {
+    // styles for header
+  }
+
+  .dummy-carousel {
+    display: flex;
+    width: 100%;
+    border: 1px solid blue;
+
+    li {
+      width: 33.33%;
+    }
+
+  }
+}
