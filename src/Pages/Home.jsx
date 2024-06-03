@@ -21,10 +21,6 @@ function Home() {
       <CustomerReviews />
       <LatestNews />
       <AppDetails/>
-
-
-      {/* scroll */}
-      <div className="scroll"></div>
     </>
   );
 }

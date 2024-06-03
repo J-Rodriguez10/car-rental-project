@@ -26,7 +26,6 @@ Latest News Card - Carousel Item
 }
 
 .latest-news-card {
-  // border: 1px solid red;
   min-height: 554px;
 
   .news-cover-img {
@@ -41,10 +40,8 @@ Latest News Card - Carousel Item
   .news-info-cont {
     position: relative;
     padding-top: 1.5rem;
-    // border: 1px solid black;
 
     .icons-list {
-      // border: 1px solid orange;
       display: flex;
       gap: 2rem;
       color: #666666;
@@ -70,13 +67,11 @@ Latest News Card - Carousel Item
     }
 
     .news-info {
-      // border: 1px solid green;
 
       h5 {
         position: relative;
         font-size: 18px;
         line-height: 1.4;
-        // border-bottom: 1px solid red;
 
         &:after {
           position: absolute;

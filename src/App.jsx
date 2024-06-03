@@ -6,6 +6,7 @@ import AutoListings from "./Pages/AutoListings";
 import Contact from "./Pages/Contact";
 import News from "./Pages/News";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<News />} />
       </Routes>
+      <Footer />
     </>
   );
 }
