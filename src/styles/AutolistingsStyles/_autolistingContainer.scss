@@ -1,0 +1,27 @@
+@use "../global/" as *;
+
+/*
+=====================
+Autolisting Container
+=====================
+*/
+
+.autolisting-sect {
+  border: 1px solid red;
+  .container {
+    display: flex;
+    border: 3px solid blue;
+
+    .grouping {
+      border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      width: 77%
+    }
+
+    // filter sidebar
+    aside {
+      width: 23%;
+    }
+  }
+}

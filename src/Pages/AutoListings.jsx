@@ -1,8 +1,15 @@
+import AutolistingContainer from "../components/AutoListings/AutolistingContainer";
+import DynamicHero from "../components/DynamicHero";
 
 function AutoListings() {
   return (
-    <div>AutoListings</div>
-  )
+    <>
+      <DynamicHero pageName="Auto Listings"/>
+      <AutolistingContainer />
+      <div className="scroll">
+      </div>
+    </>
+  );
 }
 
-export default AutoListings
+export default AutoListings;

@@ -20,7 +20,7 @@ function Home() {
       <FleetsGallery />
       <CustomerReviews />
       <LatestNews />
-      <AppDetails/>
+      <AppDetails />
     </>
   );
 }

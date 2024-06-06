@@ -1,0 +1,71 @@
+@use "../global/" as *;
+
+/*
+=====================
+Filter Row
+=====================
+*/
+
+.filter-row {
+  // border: 1px solid pink;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  // background: black;
+
+  .left {
+    // border: 1px solid orange;
+    display: flex;
+    .filter-item {
+      display: flex;
+      font-size: 11px;
+      color: #222222;
+      text-transform: uppercase;
+      font-weight: 600;
+      align-items: center;
+      // margin-left: 3rem;
+
+      select {
+        border: 1px solid #d5d4d4;
+        height: 42px;
+        color: #999999;
+        font-family: $basic-font;
+        margin-left: 1.5rem;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  .right {
+    // border: 1px solid green;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border: 1px solid $transparent-white;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      font: normal normal normal 14px / 1 FontAwesome;
+    }
+    .row-display-btn {
+  
+      &::before {
+        content: "\f03a";
+
+      }
+    }
+    .grid-display-btn {
+
+      &::before {
+        content:"\f009";
+      }
+    }
+  }
+}
