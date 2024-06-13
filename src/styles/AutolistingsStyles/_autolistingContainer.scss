@@ -7,21 +7,31 @@ Autolisting Container
 */
 
 .autolisting-sect {
-  border: 1px solid red;
+  min-height: auto;
+  padding: 8rem 0;
   .container {
     display: flex;
-    border: 3px solid blue;
+    gap: 2.5rem;
 
     .grouping {
-      border: 1px solid blue;
       display: flex;
+      gap: 6rem;
       flex-direction: column;
-      width: 77%
+      width: 77%;
     }
 
-    // filter sidebar
+    // Filter sidebar
     aside {
       width: 23%;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .autolisting-sect {
+    .container {
+      flex-direction: column;
+      gap: 15rem;
     }
   }
 }

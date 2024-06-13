@@ -1,24 +1,42 @@
 import { useState } from "react";
 import ReactSlider from "react-slider";
 
+import { useDebounce } from "./CustomHooks/useDebounce";
+import { areArraysEqual } from "./utilityFunctions";
+
 function DynamicDoubleSlider({
   headerText,
-  minVal,
-  maxVal,
   defaultValArr,
+  state,
+  updateStateFunction,
+  stateKey,
+  minVal = undefined,
+  maxVal = undefined,
   minDistance = 1,
 }) {
+  // State for input field UI
   const [inputFieldArr, setInputFieldArr] = useState(defaultValArr);
+  // State for slider thumbs UI
   const [sliderThumbsPlacement, setSliderThumbsPlacement] =
     useState(defaultValArr);
 
-  // This function activates when the user slides one of the slider thumbs
-  function handleSliderChange(value) {
-    setInputFieldArr(value);
-    setSliderThumbsPlacement(value);
+  // Getting minimum and maximum value from default values
+  if (minVal === undefined || maxVal === undefined) {
+    minVal = defaultValArr[0];
+    maxVal = defaultValArr[1];
   }
 
-  // This function activates when the user changes the input fields
+
+  const debouncedUpdateStateFunction = useDebounce(updateStateFunction);
+  // Activates when user moves the thumbs from the sliders
+  function handleSliderChange(valueArr) {
+    console.log("handling slider change", valueArr);
+    setInputFieldArr(valueArr);
+    setSliderThumbsPlacement(valueArr);
+    debouncedUpdateStateFunction(stateKey, valueArr);
+  }
+
+  // Activates when user changes the input fields from the sliders
   function handleInputChange(event, index) {
     const copyArr = [...inputFieldArr];
     const inputChange = event.target.value;
@@ -27,22 +45,24 @@ function DynamicDoubleSlider({
     setInputFieldArr(copyArr);
   }
 
-  // This function activates when the user presses a key after entering a value in the input field.
+  // Activates when user presses "Enter" after inputting a value in the input fields.
   function handleKeyPress(event, index) {
     if (event.key === "Enter") {
       handleInputValidation(event, index);
     }
   }
 
-  // After inputting a value in the input field, this function checks to see if input is valid. It then updates the slider UI to match the inputted value.
+  // Validates the data input before updating it to the parent state
   function handleInputValidation(event, index) {
+    console.log("IM SUPPOSED TO BE UPDATING");
     const copyArr = [...inputFieldArr];
-    
-    // Guard Clause: Making sure that we have some type of input
+
+    // Guard Clause: Checking to see if we have anything to work with, otherwise the input fields reset to the default min/max values.
     if (!event.target.value) {
       copyArr[index] = index === 0 ? minVal : maxVal;
       setInputFieldArr(copyArr);
       setSliderThumbsPlacement(copyArr);
+      updateStateFunction(stateKey, copyArr);
       return;
     }
 
@@ -51,14 +71,19 @@ function DynamicDoubleSlider({
     const isDistValid = Math.abs(copyArr[1] - copyArr[0]) >= minDistance;
     const isValid = input <= maxVal && input >= minVal && isDistValid;
 
-    // If not valid, revert input fields to either the minVal or maxVal
+    // If not valid, reset the input fields.
     if (!isValid) {
       copyArr[index] = index === 0 ? minVal : maxVal;
       setInputFieldArr(copyArr);
+    } else {
+      copyArr[index] = input; // If valid, we insert the validated input
     }
 
-    // Updating the slider thumbs
+    // Updating the slider thumbs UI
     setSliderThumbsPlacement(copyArr);
+
+    // Finally, updating the parent state to match UI.
+    updateStateFunction(stateKey, copyArr);
   }
 
   return (
@@ -99,6 +124,7 @@ function DynamicDoubleSlider({
           />
         </div>
 
+        {/* Separator */}
         <div className="separator">-</div>
 
         {/* Maximum field */}

@@ -12,7 +12,8 @@ Button Styles
   font-weight: 500;
   border: none;
   text-transform: uppercase;
-  transition: all 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
 }
 
 .btn-red {

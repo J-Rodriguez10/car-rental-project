@@ -1,20 +1,22 @@
 @use "../global/" as *;
 
 /*
-=====================
-Filter Sidebar
-=====================
+================================
+Filter Sidebar - Calendar Input
+================================
 */
 
 .filter-sidebar {
-  // border: 1px solid red;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   background: #f7f7f7;
   color: #222;
   padding: 3.5rem 2.5rem;
-
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  max-height: 1050px;
 
   .filter-item {
     display: flex;
@@ -35,6 +37,138 @@ Filter Sidebar
       height: 45px;
       width: 100%;
       padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .filter-sidebar {
+    padding: 3.5rem 3rem;
+
+    .filter-item {
+      gap: 2.5rem;
+
+      label {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      input {
+        height: 50px;
+      }
+    }
+  }
+}
+
+/*
+=============================================
+Filter Sidebar - Vehicle Body Selection Input
+=============================================
+*/
+
+// Vehicle body selection:
+.body-type-selection {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  gap: 5%;
+
+  .img-wrapper-active {
+    border: 1px solid black;
+  }
+
+  .img-wrapper {
+    background: white;
+    width: 33%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 93%;
+      height: 52%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .body-type-selection {
+    height: 55px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .body-type-selection {
+    height: 133px;
+
+    .img-wrapper {
+      width: 30%;
+      height: 95%;
+      img {
+        width: 80%;
+        height: 58%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .body-type-selection {
+    height: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-wrapper {
+      width: 22vw;
+      height: 16vw;
+      img {
+        width: 80%;
+        height: 58%;
+      }
+    }
+  }
+}
+
+/*
+================================
+Filter Sidebar - Fuel Type
+================================
+*/
+
+// Fuel Type Input
+.fuel-type {
+  select {
+    border-color: transparent;
+    height: 40px;
+    width: 100%;
+    font-family: $basic-font;
+    color: #999999;
+    padding: 1rem;
+  }
+}
+
+/*
+================================
+Filter Sidebar - Reset Button
+================================
+*/
+
+.btn-cont {
+  margin: 0 auto;
+  height: 42px;
+}
+
+@media screen and (max-width: 990px) {
+  .btn-cont {
+    height: 60px;
+    width: 210px;
+
+    button {
+      font-size: 1.66rem;
+      width: 100%;
+      height: 100%;
     }
   }
 }

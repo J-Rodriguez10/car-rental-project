@@ -4,10 +4,8 @@ import DynamicHero from "../components/DynamicHero";
 function AutoListings() {
   return (
     <>
-      <DynamicHero pageName="Auto Listings"/>
+      <DynamicHero pageName="Auto Listings" />
       <AutolistingContainer />
-      <div className="scroll">
-      </div>
     </>
   );
 }

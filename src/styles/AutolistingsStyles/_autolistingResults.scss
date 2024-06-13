@@ -1,0 +1,169 @@
+@use "../global/" as *;
+
+/*
+===========================
+Autolisting Results Section
+===========================
+*/
+
+.autolisting-res-sect {
+  width: 100%;
+  min-height: 1100px;
+
+  .layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  .layout-singular {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+
+/*
+====================================
+Rental Fleet Card Design - Singular
+====================================
+*/
+
+/*
+When layout is "grid", the Rental Fleet Cards will have the default appearance.
+When layout is "singular". the Rental Fleet Cards will have the new style below:
+*/
+
+.layout-singular {
+  .rental-fleet-card {
+    flex-direction: row;
+    gap: 1.5rem;
+
+    .car-img-cont {
+      min-width: 260px;
+      max-width: 260px;
+      min-height: 130px;
+      max-height: 130px;
+      margin-bottom: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .car-data-cont {
+      background: #f7f7f7;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.9rem;
+      color: $text-gray-3;
+      border: 1px solid rgba(0, 0, 0, 0.033);
+
+      .card-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $transparent-white;
+        width: 100%;
+
+        h5 {
+          font-size: 15px;
+          color: black;
+        }
+
+        .attr-list {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          li {
+            margin: 0 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+
+            .svg-cont {
+              width: 40px;
+              height: 20px;
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .perks-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 60%;
+        padding-top: 1.5rem;
+
+        li {
+          display: block;
+          color: $text-gray-2;
+          font-size: 11px;
+          margin-bottom: 0;
+          width: 39%;
+
+          color: $text-gray-2;
+          font-size: 11px;
+          margin: 0 5px 5px 0;
+          padding: 3px 0;
+          flex: 1 1 auto;
+          max-width: 50%;
+          font-weight: 500;
+
+          &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            font-weight: 900;
+            margin-right: 0.2rem;
+            font-size: 0.9rem;
+            color: rgb(50, 48, 48);
+          }
+        }
+      }
+
+      .card-bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: $primary-red;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Media Query
+@media screen and (max-width: 710px) {
+  .layout-singular {
+    border: 1px solid orange;
+
+    // Individual rental fleet cards
+    .rental-fleet-card {
+      flex-direction: row;
+      gap: 1.5rem;
+
+      .car-img-cont {
+        min-width: 160px;
+        max-width: 160px;
+      }
+    }
+  }
+}

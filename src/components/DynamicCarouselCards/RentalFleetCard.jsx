@@ -1,11 +1,10 @@
 import DynamicButton from "../DynamicButton";
-import { formatPrice } from "../helperFunctions";
+import { formatPrice } from "../utilityFunctions";
 
 import { transmissionSVG, gasSVG, highwaySVG } from "../../assets/SVGs";
 
 function RentalFleetCard({ carouselData, carouselStyle }) {
-
-  // destructuring data recieved from the DynamicCarousel Component
+  // Destructuring data received from the DynamicCarousel Component
   const {
     imgSrc,
     name,
@@ -16,14 +15,14 @@ function RentalFleetCard({ carouselData, carouselStyle }) {
 
   return (
     <li style={carouselStyle} className="rental-fleet-card">
-      {/* car rental image */}
+      {/* Car rental image */}
       <div className="car-img-cont">
         <img src={imgSrc} alt={name} />
       </div>
 
-      {/* car rental info */}
+      {/* Car rental info */}
       <div className="car-data-cont">
-        {/* header */}
+        {/* Header */}
         <div className="card-header">
           <h5>{name}</h5>
 
@@ -45,14 +44,14 @@ function RentalFleetCard({ carouselData, carouselStyle }) {
           </ul>
         </div>
 
-        {/* perks list*/}
+        {/* Perks list*/}
         <ul className="perks-list">
           {perksArr.map((perk, index) => (
             <li key={index}>{perk}</li>
           ))}
         </ul>
 
-        {/* card bottom portion */}
+        {/* Card bottom portion */}
         <div className="card-bottom">
           <p>${formatPrice(price)}</p>
 

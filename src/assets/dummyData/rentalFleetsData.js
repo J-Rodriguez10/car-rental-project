@@ -17,11 +17,15 @@ export const DUMMY_RENTAL_FLEETS = [
     name: "XV Range Subaru",
     attributes: {
       mileage: 4980,
-      fuelType: "Petrol+cng",
-      transmission: "Manual",
+      fuelType: "petrol+cng",
+      transmission: "manual",
     },
     perks: DUMMY_PERKS_VALUES,
     price: 520,
+    year: 2020,
+    date: "2022-01-15",
+    engineVolume: 2.5,
+    vehicleBodyType: "sports",
   },
   {
     imgSrc:
@@ -29,11 +33,15 @@ export const DUMMY_RENTAL_FLEETS = [
     name: "Subaru Liberty",
     attributes: {
       mileage: 4980,
-      fuelType: "Hybrid",
-      transmission: "Manual",
+      fuelType: "hybrid",
+      transmission: "manual",
     },
     perks: DUMMY_PERKS_VALUES,
     price: 665,
+    year: 2019,
+    date: "2021-06-23",
+    engineVolume: 2.0,
+    vehicleBodyType: "sedan",
   },
   {
     imgSrc:
@@ -41,11 +49,15 @@ export const DUMMY_RENTAL_FLEETS = [
     name: "Pajero Range",
     attributes: {
       mileage: 4980,
-      fuelType: "Hybrid",
-      transmission: "Manual",
+      fuelType: "hybrid",
+      transmission: "manual",
     },
     perks: DUMMY_PERKS_VALUES,
     price: 340,
+    year: 2018,
+    date: "2020-07-08",
+    engineVolume: 3.0,
+    vehicleBodyType: "pickup",
   },
   {
     imgSrc:
@@ -53,11 +65,15 @@ export const DUMMY_RENTAL_FLEETS = [
     name: "Mirage Range",
     attributes: {
       mileage: 4980,
-      fuelType: "Hybrid",
-      transmission: "Manual",
+      fuelType: "hybrid",
+      transmission: "manual",
     },
     perks: DUMMY_PERKS_VALUES,
     price: 650,
+    year: 2017,
+    date: "2019-04-19",
+    engineVolume: 1.8,
+    vehicleBodyType: "sedan",
   },
   {
     imgSrc:
@@ -65,10 +81,14 @@ export const DUMMY_RENTAL_FLEETS = [
     name: "Mitsubishi Lancer",
     attributes: {
       mileage: 4980,
-      fuelType: "Hybrid",
-      transmission: "Manual",
+      fuelType: "hybrid",
+      transmission: "manual",
     },
     perks: DUMMY_PERKS_VALUES,
     price: 440,
+    year: 2021,
+    date: "2023-03-11",
+    engineVolume: 2.4,
+    vehicleBodyType: "sports",
   },
 ];
