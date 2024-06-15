@@ -1,0 +1,78 @@
+@use "../global/" as *;
+
+/*
+========================
+Newsletter Component
+========================
+*/
+
+.newsletter-cont {
+  width: 100%;
+  border: 1px solid #eee;
+  color: #222222;
+  // height: 216px;
+
+  // Newsletter header
+  header {
+    // border: 1px solid orange;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #f7f7f7;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid $primary-red;
+  }
+
+  // Newsletter details
+  .newsletter-details {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    h6 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    p {
+      // border: 1px solid red;
+      max-width: 185px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    // Gmail input container
+    .input-cont {
+      // border: 1px solid orange;
+      height: 38px;
+      display: flex;
+      width: 100%;
+      padding: 0 0.1rem;
+      input {
+        height: 100%;
+        width: 70%;
+        font-family: $basic-font;
+        padding: 1rem;
+        font-size: 12px;
+        border: 1px solid #eee;
+      }
+
+      button {
+        height: 100%;
+        padding: 0;
+        width: 30%;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      color: #999999;
+      font-size: 11px;
+    }
+  }
+}

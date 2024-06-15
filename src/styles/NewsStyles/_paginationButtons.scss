@@ -1,0 +1,34 @@
+@use "../global/" as *;
+
+/*
+========================
+Pagination Buttons
+========================
+*/
+
+.pagination-btns {
+  // border: 1px solid red;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  .pagination-btn {
+    color: #777777;
+    font-size: 12px;
+    font-family: $basic-font;
+    // height: 35px;
+    // width: 30px;
+    padding: 1rem 1.35rem;
+    background: #f6f6f6;
+    line-height: 1.4;
+    // background: red;
+    border: none;
+    box-shadow: 0 3px 0 0 #ccc;
+    text-transform: uppercase;
+  }
+  .pagination-btn-active {
+    background: black;
+    box-shadow: 0 3px 0 0 $primary-red;
+    color: white;
+  }
+}

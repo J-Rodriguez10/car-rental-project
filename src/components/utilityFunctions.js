@@ -34,3 +34,38 @@ export function areArraysEqual(arr1, arr2) {
   }
   return true;
 }
+
+/**
+ * Converts a date string from "YYYY-MM-DD" format to "Month DD, YYYY" format.
+ *
+ * @param {string} dateString - The date string in "YYYY-MM-DD" format.
+ * @returns {string} The formatted date string in "Month DD, YYYY" format.
+ *
+ * @example
+ *
+ * formatDate("2016-08-19");
+ * --> Returns "August 19, 2016"
+ */
+export function formatDate(dateString) {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const date = new Date(dateString);
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  return `${month} ${day}, ${year}`;
+}
