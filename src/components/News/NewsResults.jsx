@@ -1,18 +1,20 @@
-import React from 'react'
-import NewsResult from './NewsResult'
+import React from "react";
+import NewsResult from "./NewsResult";
 
-import { NEWS_DUMMY_DATA } from '../../assets/dummyData/newsArticleData'
+import { NEWS_DUMMY_DATA } from "../../assets/dummyData/newsArticleData";
 
-function NewsResults({filters, isCompacted=false}) {
-
+function NewsResults({ isCompacted = false }) {
   // Which you will filter the results
-  const practiceData = NEWS_DUMMY_DATA[0];
+  
 
   return (
     <div className="news-results-queue">
-      <NewsResult newsData={practiceData} isCompacted={isCompacted}/>
+      {NEWS_DUMMY_DATA.map((news, i) => (
+        <NewsResult key={i} newsData={news} isCompacted={isCompacted} />
+      ))}
+      ;
     </div>
-  )
+  );
 }
 
-export default NewsResults
+export default NewsResults;

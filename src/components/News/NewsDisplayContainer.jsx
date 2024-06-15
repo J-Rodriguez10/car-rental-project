@@ -5,7 +5,7 @@ import NewsResults from './NewsResults'
 function NewsDisplayContainer() {
   return (
     <div className="news-display-results-cont">
-      <NewsResults />
+      <NewsResults/>
       <PaginationButtons />
     </div>
   )
