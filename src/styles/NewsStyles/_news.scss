@@ -7,30 +7,22 @@ News Page Component
 */
 
 .news-sect {
-  border: 1px solid red;
-
   .news-page-cont {
-    border: 1px solid blue;
     padding: 6rem 0;
     width: 100%;
     display: flex;
     gap: 3rem;
-    min-height:800px;
+    min-height: 800px;
 
     .main-menu {
-      border: 1px solid green;
-      // background: green;
-      width: 75%;
+      width: 72%;
     }
 
     .side-menu {
-      border: 1px solid pink;
-      // background: pink;
-      width: 25%;
-      display:flex;
+      width: 28%;
+      display: flex;
       flex-direction: column;
       gap: 2.5rem;
     }
-
   }
 }

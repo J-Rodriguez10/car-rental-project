@@ -1,8 +1,7 @@
-import React from "react";
 import { COMMENTS_DUMMY_DATA } from "../../assets/dummyData/commentsData";
 
 function Comments() {
-  COMMENTS_DUMMY_DATA;
+  // This component renders a list of comments
   return (
     <div className="comments-cont">
       {COMMENTS_DUMMY_DATA.map((comment, i) => (
@@ -14,11 +13,8 @@ function Comments() {
 
 export default Comments;
 
-
-
-
 function Comment({ userCommentsData }) {
-  // Destructuring data
+  // Destructuring data from userCommentsData prop
   const { profPicUrl, username, comment } = userCommentsData;
 
   return (

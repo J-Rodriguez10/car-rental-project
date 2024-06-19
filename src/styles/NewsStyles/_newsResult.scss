@@ -7,11 +7,9 @@ News Results Queue
 */
 
 .news-results-queue {
-  // border: 1px solid orange;
   width: 100%;
   height: auto;
   overflow: hidden;
-  // border: 3px solid blue;
 }
 
 /*
@@ -20,28 +18,20 @@ Individual News Result Styles
 ==============================
 */
 
-// News preview for when display is small
+// News preview for when display is small ----
 .news-article-preview-small {
   cursor: pointer;
-  // border: 1px solid red;
   width: 100%;
   height: 100px;
   display: flex;
   gap: 1rem;
   padding: 1.5rem 1.25rem 1.5rem 1rem;
   border-bottom: 1px solid #eee;
-
-  // .img-cont {
-  //   width: 70px;
-  //   height: 50px;
   img {
     height: 65px;
     width: 65px;
-    // height: 100%;
-    // width: 100%;
     object-fit: cover;
   }
-  // }
 
   .article-info {
     color: #444444;
@@ -59,22 +49,18 @@ Individual News Result Styles
   }
 }
 
-// News preview for when display is large
+// News preview for when display is large ----
 .news-article-preview {
   color: #222222;
   cursor: pointer;
-  // border: 1px solid red;
   width: 100%;
   height: 795px;
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
-  // gap: 1rem;
-
   border-bottom: 1px solid #eee;
 
   .article-img-cont {
-    // border: 4px solid orange;
     width: 100%;
     height: 65%;
     position: relative;
@@ -88,7 +74,6 @@ Individual News Result Styles
     .date-icon {
       content: "";
       position: absolute;
-      // border: 1px solid orange;
       width: 50px;
       height: 50px;
       z-index: 2;
@@ -118,7 +103,6 @@ Individual News Result Styles
 
   .article-info {
     height: 35%;
-    // border: 2px solid blue;
     display: flex;
     flex-direction: column;
     padding: 2.5rem 3.5rem;
@@ -144,7 +128,6 @@ Individual News Result Styles
 
         // Tabler Icon Styles
         .icon-eye {
-          // border: 1px solid orange;
           height: 18px;
           width: 18px;
           color: #939393;
@@ -152,7 +135,6 @@ Individual News Result Styles
         }
 
         span {
-          // margin-bottom: 2px;
           color: $primary-red;
         }
       }
@@ -162,11 +144,11 @@ Individual News Result Styles
       font-size: 14px;
       font-weight: 400;
       line-height: 1.4;
-      // border: 1px solid red;
       min-height: 60px;
     }
 
     .read-more-btn {
+      cursor: pointer;
       font-size: 10px;
       color: #555555;
       width: 60px;
@@ -180,5 +162,4 @@ Individual News Result Styles
       margin-top: 1.2rem;
     }
   }
-
 }

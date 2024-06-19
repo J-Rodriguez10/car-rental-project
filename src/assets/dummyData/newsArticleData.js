@@ -8,7 +8,7 @@ export const NEWS_DUMMY_DATA = [
     commentsAmnt: 3,
     description:
       "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.Utenim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exldolor in reprehenderit voluptate velit non proident sunt in culpa.",
-    views: 32,
+    views: 92,
     tags: ["auto", "car"],
   },
   {
@@ -20,7 +20,7 @@ export const NEWS_DUMMY_DATA = [
     commentsAmnt: 5,
     description:
       "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.Utenim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exldolor in reprehenderit voluptate velit non proident sunt in culpa.",
-    views: 45,
+    views: 145,
     tags: ["news", "auto"],
   },
   {
@@ -85,8 +85,7 @@ export const NEWS_DUMMY_DATA = [
     description:
       "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.Utenim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exldolor in reprehenderit voluptate velit non proident sunt in culpa.",
 
-    views: 120,
+    views: 45,
     tags: ["toyota", "oil"],
   },
 ];
-// possible tags: auto, car, news, oil, toyota, wordpress

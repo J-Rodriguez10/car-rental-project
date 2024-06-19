@@ -6,6 +6,7 @@
 Universal Reset
 =====================
 */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +21,7 @@ Universal Reset
 // base styles
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -43,7 +44,6 @@ Containers
 =====================
 */
 
-
 $mobile-width: 760px;
 $medium-width: 1000px;
 $desktop-width: 1200px;
@@ -65,22 +65,18 @@ $desktop-width: 1200px;
   }
 }
 
-
 .container-wide {
   margin: 0 auto !important;
   width: 100%;
   padding: 0;
   @media (min-width: $mobile-width) {
-
   }
 
   @media (min-width: $medium-width) {
-
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1200px;
-  
   }
 }
 

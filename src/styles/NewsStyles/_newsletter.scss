@@ -10,11 +10,9 @@ Newsletter Component
   width: 100%;
   border: 1px solid #eee;
   color: #222222;
-  // height: 216px;
 
   // Newsletter header
   header {
-    // border: 1px solid orange;
     font-size: 16px;
     text-transform: uppercase;
     background: #f7f7f7;
@@ -38,7 +36,6 @@ Newsletter Component
       font-weight: 600;
     }
     p {
-      // border: 1px solid red;
       max-width: 185px;
       font-size: 12px;
       line-height: 1.45;
@@ -46,7 +43,6 @@ Newsletter Component
 
     // Gmail input container
     .input-cont {
-      // border: 1px solid orange;
       height: 38px;
       display: flex;
       width: 100%;

@@ -31,8 +31,6 @@ Benefit Component
 
   // Conditional Tags Menu Styles
   .tags-menu {
-    // background: pink;
-    // border: 1px solid orange;
     margin: 0 auto;
     max-width: 175px;
     display: flex;
@@ -40,14 +38,12 @@ Benefit Component
     flex-wrap: wrap;
     padding: 1rem 0;
 
-
     .tag {
       font-size: 9px;
       background: #f9f9f9;
       margin: 1px;
       text-transform: uppercase;
       cursor: pointer;
-      // border: 1px solid black;
       padding: 6px 8px;
     }
     .tag-active {

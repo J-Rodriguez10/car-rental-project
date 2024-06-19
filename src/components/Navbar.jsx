@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 import logo from "../images/logo/autostar-logo.png";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 
-// react router automatically passes in isActive prop
+// React router automatically passes in isActive prop
 function checkIsActive({ isActive }) {
   return isActive ? "active-link" : "";
 }
@@ -20,7 +20,7 @@ function Navbar() {
     setIsOpen(false);
   }
 
-  // framer motion animations:
+  // Framer motion animations:
   const mobileMenuVariant = {
     hidden: {
       x: "-100%",
@@ -75,7 +75,7 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* mobile */}
+        {/* Mobile */}
         <div className="mobile-nav-cont">
           <div onClick={openMobileMenu} className="nav-toggle-btn">
             <IconMenu2 width={40} height={30} color="white" />
