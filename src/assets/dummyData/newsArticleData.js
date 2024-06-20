@@ -14,7 +14,7 @@ export const NEWS_DUMMY_DATA = [
   {
     articleImgURL:
       "https://autostar.pro-theme.info/wp-content/uploads/2016/10/567353681.jpg",
-    date: "2017-01-23",
+    date: "2017-02-07",
     title: "Tesla's New Model Hits the Market",
     author: "John Doe",
     commentsAmnt: 5,

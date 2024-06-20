@@ -5,14 +5,14 @@ import {
   workerSVG,
   shieldSVG,
   twentyFourSevenSVG,
-  phoneSVG
+  phoneSVG,
 } from "../../assets/SVGs";
 
 function ContactUs() {
   return (
     <>
       {/* contact-us info */}
-      <section className="contact-us-sect">
+      <section className="contact-us-sect" id="about-us">
         <div className="contact-us-cont container-wide">
           <div className="contact-info">
             <DynamicHeader
@@ -70,8 +70,10 @@ function ContactUs() {
       </section>
 
       {/* contact us strip */}
-      <div className="contact-us-info-strip">
-        <p>Call Today For Booking <span>Your Next Ride</span></p>
+      <div className="contact-us-info-strip" id="contact">
+        <p>
+          Call Today For Booking <span>Your Next Ride</span>
+        </p>
         <div className="phone-number">
           {phoneSVG}
           <p>(800) 650 743</p>

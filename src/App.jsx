@@ -3,7 +3,6 @@ import "./dist/styles.css";
 
 import Home from "./Pages/Home";
 import AutoListings from "./Pages/AutoListings";
-import Contact from "./Pages/Contact";
 import News from "./Pages/News";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -15,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auto-listings" element={<AutoListings />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<News />} />
       </Routes>
       <Footer />

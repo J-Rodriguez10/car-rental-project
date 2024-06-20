@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import logo from "../images/logo/autostar-logo.png";
 import { IconMenu2, IconX } from "@tabler/icons-react";
@@ -12,6 +12,8 @@ function checkIsActive({ isActive }) {
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   function openMobileMenu() {
     setIsOpen(true);
@@ -54,14 +56,10 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className={checkIsActive} to="/about-us">
-              About Us
-            </NavLink>
+            <a onClick={() => navigate("/#about-us")}>About Us</a>
           </li>
           <li>
-            <NavLink className={checkIsActive} to="/testimonials">
-              Testimonials
-            </NavLink>
+            <a onClick={() => navigate("/#testimonials")}>Testimonials</a>
           </li>
           <li>
             <NavLink className={checkIsActive} to="/news">
@@ -69,9 +67,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className={checkIsActive} to="/contact">
-              Contact
-            </NavLink>
+            <a onClick={() => navigate("/#contact")}>Contact</a>
           </li>
         </ul>
 
@@ -105,20 +101,22 @@ function Navbar() {
                 <Link to="/auto-listings">Auto Listings</Link>
               </li>
               <li>
-                <Link to="/about-us">
+                <a onClick={() => navigate("/#about-us")}>
                   <span>About Us</span>
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/testimonials">
+                <a onClick={() => navigate("/#testimonials")}>
                   <span>Testimonials</span>
-                </Link>
+                </a>
               </li>
               <li>
                 <Link to="/news">News</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <a onClick={() => navigate("/#contact")}>
+                  <span>Contact</span>
+                </a>
               </li>
             </ul>
           </motion.aside>

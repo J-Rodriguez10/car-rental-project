@@ -5,16 +5,15 @@ import DynamicCarousel from "../DynamicCarousel";
 import TransitionSVG from "../TransitionSVG";
 
 function CustomerReviews() {
-
   return (
-    <section className="customer-reviews-sect">
+    <section className="customer-reviews-sect" id="testimonials">
       <div className="container">
         {/* header */}
         <DynamicHeader
           header="Customer Reviews"
           headerColor="black"
           subtitle="Luxury Rental Services"
-        ></DynamicHeader>
+        />
 
         {/* customer review carousel */}
         <DynamicCarousel
@@ -22,7 +21,7 @@ function CustomerReviews() {
           CarouselItem={CustomerReviewCard}
           desktopConfigureObj={{ displayAmnt: 1, minWidth: 1000 }}
           mediumConfigureObj={{ displayAmnt: 1, minWidth: 1000 }}
-          mobileConfigureObj={{ displayAmnt: 1, minWidth: 1000}}
+          mobileConfigureObj={{ displayAmnt: 1, minWidth: 1000 }}
         />
       </div>
 
