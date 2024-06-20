@@ -1,22 +1,5 @@
-
-/**
- * DynamicCarousel Component:
- * 
- * This component creates a dynamic carousel that adapts its display based on the screen size.
- * It renders a list of carousel items with pagination buttons for navigation.
- * The number of items displayed and their width and margin adjust responsively according to the screen size.
- * 
- * Props:
- * - carouselDataArr: Array of data to be displayed in the carousel.
- * - CarouselItem: Component to render each individual carousel item.
- * - desktopConfigureObj, mediumConfigureObj, mobileConfigureObj: Configuration objects specifying the display amount and minimum width for different screen sizes.
- * 
- * ! NOTE: the CarouselItem child component must be able to recieve carouselData and carouselStyles for this component to do its job.
- */
-
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
 
 function DynamicCarousel({
   carouselDataArr,
@@ -25,7 +8,7 @@ function DynamicCarousel({
   mediumConfigureObj,
   mobileConfigureObj,
 }) {
-  // Destructuring carousel configuration props
+  // Destructuring carousel configuration props for different screen sizes
   const { displayAmnt: desktopDisplayAmnt, minWidth: desktopMinWidth } =
     desktopConfigureObj;
   const { displayAmnt: mediumDisplayAmnt, minWidth: mediumMinWidth } =
@@ -33,7 +16,7 @@ function DynamicCarousel({
   const { displayAmnt: mobileDisplayAmnt, minWidth: mobileMinWidth } =
     mobileConfigureObj;
 
-  // State variables
+  // State variables to manage carousel's position, screen size, styles, and active button index
   const [translatePercent, setTranslatePercent] = useState("0%");
   const [screenSize, setScreenSize] = useState(getInitialScreenSize());
   const [carouselStylesObj, setCarouselStylesObj] = useState(() =>
@@ -41,13 +24,12 @@ function DynamicCarousel({
   );
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
 
-  // Effect for handling screen resize through a resize event listener
+  // Effect to handle screen resize and adjust carousel styles accordingly
   useEffect(() => {
     function handleScreenResize() {
       const newScreenSize = getScreenSize(window.innerWidth);
       if (screenSize !== newScreenSize) {
         const newCarouselStyles = extractStylesFromScreenSize(newScreenSize);
-
         const newCarouselPosition = `-${
           activeBtnIndex * newCarouselStyles.cardShiftAmnt
         }%`;
@@ -61,14 +43,14 @@ function DynamicCarousel({
     window.addEventListener("resize", handleScreenResize);
 
     return () => window.removeEventListener("resize", handleScreenResize);
-  }, [screenSize]);
+  }, [screenSize, activeBtnIndex]);
 
-  // Function to calculate initial carousel styles based on screen size
+  // Function to calculate initial carousel styles based on the initial screen size
   function getInitialCarouselStyles(initialScreenSize) {
     return extractStylesFromScreenSize(initialScreenSize);
   }
 
-  // Function to extract carousel styles based on screen size
+  // Function to extract carousel styles based on the screen size
   function extractStylesFromScreenSize(screenSize) {
     let displayAmnt;
 
@@ -91,12 +73,12 @@ function DynamicCarousel({
     };
   }
 
-  // Function to get initial screen size
+  // Function to get the initial screen size based on the current window width
   function getInitialScreenSize() {
     return getScreenSize(window.innerWidth);
   }
 
-  // Function to determine screen size based on width
+  // Function to determine the screen size category based on the window width
   function getScreenSize(width) {
     if (width >= desktopMinWidth) {
       return "desktop";
@@ -105,18 +87,15 @@ function DynamicCarousel({
     } else if (width >= mobileMinWidth) {
       return "mobile";
     } else {
-      console.error(
-        "There is no carousel design for width below the minimum mobile width set:",
-        mobileMinWidth
-      );
+      return "mobile";
     }
   }
 
-  // Function to handle pagination button click
+  // Function to handle pagination button clicks and update the carousel position
   function handlePagBtnClick(newBtnIndex) {
     setActiveBtnIndex(newBtnIndex);
 
-    // Negative percentage value translates slider RIGHT
+    // Calculate the new translation percentage to shift the carousel
     const formattedPercent = `-${
       carouselStylesObj.cardShiftAmnt * newBtnIndex
     }%`;
@@ -124,7 +103,7 @@ function DynamicCarousel({
     setTranslatePercent(formattedPercent);
   }
 
-  // Function to generate pagination buttons
+  // Function to generate pagination buttons based on the number of carousel items
   function generatePaginationButtons() {
     const numOfBtns = carouselDataArr.length;
 
@@ -139,7 +118,7 @@ function DynamicCarousel({
     ));
   }
 
-  // Animation variants
+  // Animation variants for the carousel using Framer Motion
   const carouselVariant = {
     initial: { x: "0%" },
     shiftX: {
@@ -148,23 +127,21 @@ function DynamicCarousel({
     },
   };
 
-  // Styles for the dynamic carousel cards extracted from carouselStyleObj state
+  // Dynamic styles for carousel cards based on the current screen size
   const dynamicCarouselCardStyles = {
     minWidth: `${carouselStylesObj.cardWidth}%`,
     marginLeft: `${carouselStylesObj.cardMargin}%`,
     marginRight: `${carouselStylesObj.cardMargin}%`,
   };
 
-  // Validating and augmenting data
+  // Validate and augment carousel data array to ensure smooth looping of items
   let augmentedDataArr;
-
   if (desktopDisplayAmnt > carouselDataArr.length) {
     console.error(
       "ERROR: You are trying to display more elements in the DynamicCarousel Component than what your carouselDataArr has"
     );
   } else {
     const augmentAmnt = desktopDisplayAmnt - 1;
-
     augmentedDataArr = [
       ...carouselDataArr,
       ...carouselDataArr.slice(0, augmentAmnt),
@@ -174,10 +151,9 @@ function DynamicCarousel({
   return (
     <>
       <div className="dynamic-carousel">
-        {/* Viewport */}
+        {/* Viewport for the carousel */}
         <div className="carousel-viewport">
-          
-          {/* Slider */}
+          {/* Slider with animated transition */}
           <motion.ul
             className="slider"
             variants={carouselVariant}
@@ -196,7 +172,7 @@ function DynamicCarousel({
       </div>
 
       <div className="carousel-pagination-btns">
-        {/* Generate pagination buttons */}
+        {/* Render pagination buttons */}
         {generatePaginationButtons()}
       </div>
     </>

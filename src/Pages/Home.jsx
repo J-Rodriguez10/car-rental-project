@@ -11,25 +11,22 @@ import OurBenefits from "../components/Home/OurBenefits";
 import RentalFleets from "../components/Home/RentalFleets";
 import StepsInfo from "../components/Home/StepsInfo";
 
-
 function Home() {
   const [hash, setHash] = useState("");
   const location = useLocation();
 
-  
   // These useEffects are for same page scrolling when the URL changes:
 
   useEffect(() => {
     // Extract hash from location object
     const newHash = location.hash.substring(1);
-    setHash(newHash); 
+    setHash(newHash);
   }, [location.hash]); // Trigger effect when hash in location changes
 
   useEffect(() => {
-    console.log("Hash:", hash);
+    console.log("Hash for the home page:", hash);
     if (hash) {
       const element = document.getElementById(hash);
-      console.log("Element:", element);
       if (element) {
         const yOffset = 0; // Offset if necessary
         const y =
