@@ -3,9 +3,8 @@ import React from "react";
 import { formatDate } from "../utilityFunctions";
 import { IconEye } from "@tabler/icons-react";
 
-
 function NewsResult({ newsData, isCompacted = false }) {
-  // Destructuring the newsData 
+  // Destructuring the newsData
   const {
     articleImgURL,
     date,
@@ -18,13 +17,25 @@ function NewsResult({ newsData, isCompacted = false }) {
   } = newsData;
 
   function returnFormattedDateMarkup(date) {
-    const abbreviatedMonths = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "NOV", "DEC"];
+    const abbreviatedMonths = [
+      "JAN",
+      "FEB",
+      "MAR",
+      "APR",
+      "MAY",
+      "JUN",
+      "JUL",
+      "AUG",
+      "SEPT",
+      "NOV",
+      "DEC",
+    ];
 
     const dateObj = new Date(date);
 
     return (
       <p>
-        <span>{dateObj.getDay()} </span>
+        <span>{dateObj.getDate()} </span>
         {abbreviatedMonths[dateObj.getMonth()]}
       </p>
     );

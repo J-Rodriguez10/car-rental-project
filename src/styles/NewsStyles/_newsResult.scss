@@ -62,7 +62,7 @@ Individual News Result Styles
 
   .article-img-cont {
     width: 100%;
-    height: 65%;
+    height: 60%;
     position: relative;
 
     img {
@@ -163,3 +163,66 @@ Individual News Result Styles
     }
   }
 }
+
+
+// Media Screen Queries for the article image container
+@media screen and (max-width: 1000px) {
+  .news-article-preview {
+    .article-img-cont {
+      width: 100%;
+      height: 45%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .news-queue {
+    padding: 0 1.5rem;
+  }
+  .news-article-preview {
+    .article-img-cont {
+      width: 100%;
+      height: 55%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .news-queue {
+    padding: 0 1.5rem;
+  }
+  .news-article-preview {
+    width: 100%;
+    height: 795px;
+
+    .article-img-cont {
+      width: 100%;
+      height: 65vw;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .article-info {
+      .description {
+        min-height: auto;
+      }
+    }
+  }
+}
+

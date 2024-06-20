@@ -26,3 +26,20 @@ News Page Component
     }
   }
 }
+
+@media screen and (max-width: 995px) {
+  .news-sect {
+    .news-page-cont {
+      flex-direction: column;
+      gap: 10rem;
+
+      .main-menu {
+        width: 100%;
+      }
+
+      .side-menu {
+        width: 100%;
+      }
+    }
+  }
+}

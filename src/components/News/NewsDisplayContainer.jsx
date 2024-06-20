@@ -7,7 +7,7 @@ function NewsDisplayContainer() {
   const { newsFilters } = useContext(NewsContext);
 
   return (
-    <div>
+    <div className="news-queue">
       <NewsResults
         displayAmnt={4}
         hasPaginationButtons
