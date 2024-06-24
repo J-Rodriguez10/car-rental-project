@@ -1,9 +1,20 @@
-# React + Vite
+<div align="center">
+	<img src="https://github.com/J-Rodriguez10/car-rental-project/assets/142853275/fc58f135-0292-4e3c-9e58-468534a1f8de">
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## About the Project
+The Autostar website was made to showcase an automotive business, offering a sleek and spacious layout for easy navigation. Its extensive use of white space prevents clutter, while large images and eye-catching promotional banners create a smooth user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# car-rental-project
+Credit for the design goes to [Pixity](https://themeforest.net/item/autostar-rental-dealer-car-rental-automotive-car-dealer-automotive-car-rental-service/17130939) ✨ ✨ ✨ 
+
+👉 Check Out the Live Demo: Live Demo
+
+
+## Built With:
+- React
+- Sass/Scss
+
+
+## 📸 Snapshot Of the Project 📸 
+![localhost_5173_-min](https://github.com/J-Rodriguez10/car-rental-project/assets/142853275/45dff195-3eac-4fb9-bb11-45573714afdd)
