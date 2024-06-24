@@ -29,8 +29,8 @@ function Footer() {
 
           <div className="col showroom">
             <h6>Showroom</h6>
-            <p> USA, Auto, King St. 665087</p>
-            <p>Phone.: +7 234 949-58-83</p>
+            <p> USA, Fake, Fake St. 999999</p>
+            <p>Phone.: +9 999 999-99-99</p>
             <p>E-mail.: info@example.com</p>
             <p>© 2024 Auto LTD</p>
           </div>

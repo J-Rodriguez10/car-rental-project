@@ -76,7 +76,7 @@ function ContactUs() {
         </p>
         <div className="phone-number">
           {phoneSVG}
-          <p>(800) 650 743</p>
+          <p>(999) 999 999</p>
         </div>
         <p className="bolden">Operators available 24/7</p>
       </div>
