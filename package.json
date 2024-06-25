@@ -1,7 +1,7 @@
 {
-  "homepage": "https://J-Rodriguez10.github.io/car-rental-project",
+  "homepage": "https://j-rodriguez10.github.io/car-rental-project/",
   "name": "car-rental-project",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
