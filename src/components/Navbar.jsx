@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { IconBrandGithub } from "@tabler/icons-react"
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import logo from "../images/logo/autostar-logo.png";
@@ -40,8 +41,12 @@ function Navbar() {
   return (
     <nav>
       <div className="navbar">
+
         {/* logo */}
-        <img src={logo} alt="autostar-logo" />
+        <a href="https://github.com/J-Rodriguez10/car-rental-project" target="_blank" rel="noopener noreferrer" className="logo-link">
+          <img src={logo} alt="autostar-logo" />
+          <IconBrandGithub size={22} className="github-icon" color="white" />
+        </a>
 
         {/* desktop */}
         <ul className="navbar__ul">
